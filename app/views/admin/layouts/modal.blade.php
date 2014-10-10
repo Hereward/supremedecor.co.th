@@ -51,7 +51,7 @@
     {{-- <link rel="stylesheet" href="{{asset('assets/css/wysihtml5/bootstrap-wysihtml5.css')}}"> --}}
     
     <link rel="stylesheet" href="{{asset('assets/components-font-awesome/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/wysihtml5/bootstrap3-wysihtml5.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/wysihtml5/dist/bootstrap3-wysihtml5.min.css')}}">
     
     
     <link rel="stylesheet" href="{{asset('assets/css/datatables-bootstrap.css')}}">
