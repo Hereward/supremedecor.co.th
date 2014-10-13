@@ -41,7 +41,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <img class="visible-lg" src="{{asset('uploads/misc/logo_1.png')}}" alt="Supreme Decor"/>
+                <li><img class="visible-lg" src="{{asset('uploads/misc/logo_1.png')}}" alt="Supreme Decor"/></li>
                 {{--
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
