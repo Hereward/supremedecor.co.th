@@ -6,7 +6,7 @@
 		<meta charset="utf-8" />
 		<title>
 			@section('title')
-			Laravel 4 Sample Site
+			Supreme Decor Acrylic Products
 			@show
 		</title>
 		@section('meta_keywords')
@@ -51,49 +51,15 @@
 	</head>
 
 	<body>
-		<!-- To make sticky footer need to wrap in a div -->
-		<div id="wrap">
+		
+		
 		<!-- Navbar -->
-		<div style="border-color:#f8f8f8;" class="navbar navbar-default">
-			 <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-						<li {{ (Request::is('/') ? ' class="active"' : '') }}><a href="{{{ URL::to('') }}}">Home</a></li>
-                                                <li><a href="{{{ URL::to('') }}}">About Us</a></li>
-                                                <li><a href="{{{ URL::to('') }}}">News</a></li>
-                                                <li><a href="{{{ URL::to('') }}}">Catalogue</a></li>
-                                                <li><a href="{{{ URL::to('') }}}">Content</a></li>
-                                                <li><a href="{{{ URL::to('') }}}">Search</a></li>
-					</ul>
-
-                    <ul class="nav navbar-nav pull-right">
-                        @if (Auth::check())
-                        @if (Auth::user()->hasRole('admin'))
-                        <li><a href="{{{ URL::to('admin') }}}">Admin Panel</a></li>
-                        @endif
-                        <li><a href="{{{ URL::to('user') }}}">Logged in as {{{ Auth::user()->username }}}</a></li>
-                        <li><a href="{{{ URL::to('user/logout') }}}">Logout</a></li>
-                        @else
-                        <li {{ (Request::is('user/login') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/login') }}}">Login</a></li>
-                        <li {{ (Request::is('user/create') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/create') }}}">{{{ Lang::get('site.sign_up') }}}</a></li>
-                        @endif
-                    </ul>
-					<!-- ./ nav-collapse -->
-				</div>
-			</div>
-		</div>
+                 @include('components/navigation')
+		
 		<!-- ./ navbar -->
 
 		<!-- Container -->
-		<div class="container">
+		<div class="container main_content">
 			<!-- Notifications -->
 			@include('notifications')
 			<!-- ./ notifications -->
@@ -101,20 +67,18 @@
 			<!-- Content -->
 			@yield('content')
 			<!-- ./ content -->
+                        
+                         <div class="footer">
+	                    <p class="pull-right"><a href="#">Back to top</a></p>
+                            <p>&copy; 2014 Supreme Decor Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+	                </div>
 		</div>
 		<!-- ./ container -->
 
-		<!-- the following div is needed to make a sticky footer -->
-		<div id="push"></div>
-		</div>
-		<!-- ./wrap -->
+		
 
 
-	    <div id="footer">
-	      <div class="container">
-	        
-	      </div>
-	    </div>
+	
 
 		<!-- Javascripts
 		================================================== -->

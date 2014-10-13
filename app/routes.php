@@ -122,6 +122,27 @@ Route::get('contact-us', function()
     return View::make('site/contact-us');
 });
 
+# About Us Static Page
+Route::get('about-us', function()
+{
+    // Return about us page
+    return View::make('site/about-us');
+});
+
+# News Page
+Route::get('news', function()
+{
+    // Return about us page
+    return View::make('site/news');
+});
+
+# Catalogue Page
+Route::get('catalogue', function()
+{
+    // Return about us page
+    return View::make('site/catalogue');
+});
+
 # Posts - Second to last set, match slug
 Route::get('{postSlug}', 'BlogController@getView');
 Route::post('{postSlug}', 'BlogController@postView');
